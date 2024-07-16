@@ -1,0 +1,30 @@
+# Function to calculate total score
+def calculate_total(student):
+    # Total is the sum of Hindi, English, Maths, Science, and Computer scores
+    total = student['Hindi'] + student['English'] + student['Maths'] + student['Science'] + student['Computer']
+    return total
+
+# List to store student data
+students = []
+
+# Adding student data
+students.append({'ID': 1, 'Name': 'Ashish', 'Standard': '10th', 'Age': 15, 'Hindi': 85, 'English': 88, 'Maths': 92, 'Science': 90, 'Computer': 95, 'Total': 0})  
+students.append({'ID': 2, 'Name': 'Abhi', 'Standard': '10th', 'Age': 16, 'Hindi': 78, 'English': 82, 'Maths': 88, 'Science': 84, 'Computer': 80, 'Total': 0})   
+students.append({'ID': 3, 'Name': 'Aman', 'Standard': '10th', 'Age': 15, 'Hindi': 90, 'English': 92, 'Maths': 94, 'Science': 93, 'Computer': 96, 'Total': 0})  
+students.append({'ID': 4, 'Name': 'Kratika', 'Standard': '10th', 'Age': 15, 'Hindi': 97, 'English': 90, 'Maths': 90, 'Science': 91, 'Computer': 90, 'Total': 0}) 
+students.append({'ID': 5, 'Name': 'Mona', 'Standard': '10th', 'Age': 15, 'Hindi': 76, 'English': 81, 'Maths': 39, 'Science': 87, 'Computer': 90, 'Total': 0})  
+students.append({'ID': 6, 'Name': 'Pratush', 'Standard': '10th', 'Age': 16, 'Hindi': 64, 'English': 72, 'Maths': 58, 'Science': 94, 'Computer': 70, 'Total': 0})   
+students.append({'ID': 7, 'Name': 'Ragini', 'Standard': '10th', 'Age': 15, 'Hindi': 92, 'English': 95, 'Maths': 91, 'Science': 92, 'Computer': 59, 'Total': 0})  
+students.append({'ID': 8, 'Name': 'Kartik', 'Standard': '10th', 'Age': 15, 'Hindi': 78, 'English': 69, 'Maths': 70, 'Science': 88, 'Computer': 76, 'Total': 0}) 
+students.append({'ID': 9, 'Name': 'Anshika', 'Standard': '10th', 'Age': 15, 'Hindi': 88, 'English': 81, 'Maths': 50, 'Science': 70, 'Computer': 51, 'Total': 0})  
+students.append({'ID': 10, 'Name': 'Aira', 'Standard': '10th', 'Age': 16, 'Hindi': 63, 'English': 2, 'Maths': 89, 'Science': 87, 'Computer': 89, 'Total': 0})  
+
+# Calculate total score for each student
+for student in students:
+    student['Total'] = calculate_total(student)
+
+# Print student data
+print("ID  | Name    | Standard | Age | Hindi | English | Maths | Science | Computer | Total  ")
+print("----|---------|----------|-----|-------|---------|-------|---------|----------|--------")
+for student in students:
+    print(f" {student['ID']:2} | {student['Name']:<7} | {student['Standard']:<8} | {student['Age']:<3} | {student['Hindi']:<5} | {student['English']:<7} | {student['Maths']:<5} | {student['Science']:<7} | {student['Computer']:<8} | {student['Total']:<5}")
